@@ -2,7 +2,7 @@
 title: "Shamanth Kuthpadi"
 subtitle: "skuthpadi[at]umass[dot]edu"
 image: profile.jpeg
-keywords: ["Shamanth", "Kuthpadi", "Seethakantha", "data science", "real-time inference", "causal inference", "machine learning", "academic porfolio", "CV"]
+keywords: ["edge cloud continuum", "real-time inference", "causal inference", "machine learning", "academic porfolio", "CV"]
 about:
   id: hero-heading
   template: trestles
@@ -34,6 +34,12 @@ In the near past, I also enjoyed being a part-time research intern at [IOMICS Co
 
 ### News
 ::: {.scrollable-news}
+::: {.news-item}
+**October 2026**: MusicRec paper was accepted to IEEE BigData 2026.
+:::
+::: {.news-item}
+**September 2026**: Completed the NSF I-Corps (national team level) alongside Prof. Ganesan, Dr. Xingda Chen, and Anthony Durante.
+:::
 ::: {.news-item}
 **June 2026**: Motion Robust Biosignal Monitoring paper accepted to Advanced Healthcare Materials.
 :::
@@ -97,7 +103,7 @@ In the near past, I also enjoyed being a part-time research intern at [IOMICS Co
 [Submitted to International Conference on Systems Biology (ICSB)]{.pub-venue}
 ::: -->
 
-### Selected Publications & Current Research
+### Publications
 
 ::: {.publication}
 [**VYRE: Low-Burden and Robust Oscillometric Ring-Based System for Frequent Blood Pressure Monitoring**]{.pub-title}\
@@ -109,3 +115,17 @@ In the near past, I also enjoyed being a part-time research intern at [IOMICS Co
 [T.Q. Trung, **S.K. Seethakantha**, Z. Lei, A. Radmehr, P. Nguyen, D. Ganesan]{.pub-authors}\
 [Advanced Healthcare Materials]{.pub-venue}
 :::
+::: {.publication}
+[**MusicRec: Audio, Lyrics, and Engagement Feature Enrichment for Music Recommendation**]{.pub-title}\
+[S.P. Kandagatla, S.R. Narayana, C. Magapu, S. Mohan, **S.K. Seethakantha**, H. Chen, R.A. Rossi, F. Dernoncourt, N. Ahmed]{.pub-authors}\
+[IEEE BigData 2026]{.pub-venue}
+:::
+
+## Preprints
+
+::: {.publication}
+[**Hallucination Detection-Guided Preference Optimization for Clinical Summarization**]{.pub-title}\
+[**S.K. Seethakantha**, D.N. Thai, V.P. Gudi, S. Tiwari, R. Matar, A. Mitra, W. Zhao, A. McCallum, W. Salloum]{.pub-authors}\
+[arXiv]{.pub-venue}
+:::
+

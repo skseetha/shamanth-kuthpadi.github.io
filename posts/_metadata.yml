@@ -4,8 +4,13 @@
 # (see https://quarto.org/docs/projects/code-execution.html#freeze)
 freeze: true
 
-# Enable banner style title blocks
-title-block-banner: true
+# Plain title block (styled in post.css)
+title-block-banner: false
+
+# Reading-column styling for posts; footnotes render as margin sidenotes
+css: post.css
+reference-location: margin
+toc-location: left
 
 page-layout: article
 

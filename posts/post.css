@@ -1,0 +1,253 @@
+/* Blog post styling, modeled on math.as-an.art: a narrow Vollkorn column,
+   italic headings, ornament dividers, and footnotes as margin sidenotes.
+   Loaded only for posts (see posts/_metadata.yml); navbar and footer keep the site theme. */
+
+@import url("https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap");
+
+:root {
+  --post-ink: #1d1d1d;
+  --post-paper: #ffffff;
+  --post-muted: #555555;
+}
+
+body.quarto-dark {
+  --post-ink: #e8e6e3;
+  --post-paper: #1b1b1b;
+  --post-muted: #a8a8a8;
+}
+
+body.quarto-dark,
+body.quarto-dark #quarto-content {
+  background: var(--post-paper);
+}
+
+/* ---- column and body text ---- */
+
+#title-block-header,
+main.content {
+  font-family: "Vollkorn", Georgia, serif;
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum";
+  color: var(--post-ink);
+}
+
+main.content {
+  font-size: 20px;
+  line-height: 1.5;
+  hyphens: auto;
+  hyphenate-limit-chars: 10 4 4;
+}
+
+/* keep the reading column to ~650px */
+.page-layout-article main.content,
+#title-block-header .quarto-title,
+#title-block-header .quarto-title-meta {
+  max-width: 650px;
+}
+
+/* ---- title block ---- */
+
+#title-block-header {
+  margin-top: 2rem;
+  margin-bottom: 1.6rem;
+}
+
+#title-block-header .quarto-title-banner {
+  background: none;
+  padding: 0;
+  margin: 0;
+  color: var(--post-ink);
+}
+
+#title-block-header h1.title {
+  font-family: "Vollkorn", Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 1.1;
+  color: var(--post-ink);
+  margin-bottom: 0;
+  padding-bottom: 0.1em;
+  border-bottom: 1.7px solid var(--post-ink);
+  hyphens: manual;
+}
+
+#title-block-header.quarto-title-block .quarto-title-meta {
+  display: flex !important;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 0.35rem;
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+#title-block-header .quarto-title-meta > div {
+  margin: 0;
+}
+
+#title-block-header .quarto-title-meta-heading {
+  display: none;
+}
+
+#title-block-header .quarto-title-meta-contents p {
+  margin: 0;
+}
+
+#title-block-header .quarto-title-meta-contents p:not(.date) {
+  font-size: 17px;
+}
+
+#title-block-header .quarto-categories {
+  margin-top: 0.4rem;
+  order: 3;
+}
+
+#title-block-header .quarto-category {
+  font-family: "Vollkorn", Georgia, serif;
+  font-size: 13px;
+  font-style: italic;
+  text-transform: lowercase;
+  color: var(--post-muted);
+  border: none;
+  background: none;
+  padding: 0 0.6em 0 0;
+  opacity: 1;
+}
+
+/* ---- headings ---- */
+
+main.content h1,
+main.content h2,
+main.content h3,
+main.content h4,
+main.content h5 {
+  font-family: "Vollkorn", Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--post-ink);
+  border-bottom: none;
+  margin-top: 1.6em;
+  hyphens: manual;
+}
+
+main.content h1 { font-size: 26px; }
+main.content h2 { font-size: 22px; }
+main.content h3,
+main.content h4,
+main.content h5 { font-size: 20px; }
+
+/* ---- links: ink-colored, underlined, inverted on hover ---- */
+
+main.content a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+main.content a:hover {
+  background: var(--post-ink);
+  color: var(--post-paper);
+}
+
+main.content a.anchorjs-link:hover,
+main.content .footnote-ref:hover {
+  background: none;
+  color: inherit;
+}
+
+/* ---- dividers: `---` renders as a centered swung dash (stands in for the
+   reference's -.- ornament, a ligature Google Fonts' Vollkorn doesn't ship) ---- */
+
+main.content hr {
+  border: none;
+  background: none;
+  opacity: 1;
+  height: auto;
+  margin: 1em 0 0.4em;
+  text-align: center;
+  overflow: visible;
+}
+
+main.content hr::after {
+  content: "\2053";
+  font-family: "Vollkorn", Georgia, serif;
+  font-size: 1.4em;
+  color: var(--post-ink);
+}
+
+/* ---- lists: hanging dashes like the reference ---- */
+
+main.content ul {
+  padding-left: 1em;
+  list-style: none;
+}
+
+main.content ul > li {
+  position: relative;
+  margin: 0.6em 0;
+}
+
+main.content ul > li::before {
+  content: "-";
+  position: absolute;
+  right: 100%;
+  padding-right: 0.3em;
+}
+
+/* ---- blockquotes ---- */
+
+main.content blockquote {
+  border-left: 1.7px solid var(--post-ink);
+  color: var(--post-ink);
+  font-style: italic;
+  padding-left: 1em;
+  margin-left: 0;
+}
+
+/* ---- code: keep monospace, scale it down to sit with the serif ---- */
+
+main.content code {
+  font-size: 85%;
+}
+
+main.content pre code {
+  font-size: 15px;
+}
+
+/* ---- sidenotes: footnotes go in the margin (reference-location: margin) ---- */
+
+.column-margin.column-container,
+#quarto-margin-sidebar,
+main.content .margin-aside,
+main.content aside {
+  font-family: "Vollkorn", Georgia, serif;
+  font-size: 14px;
+  line-height: 1.35;
+  color: var(--post-ink);
+}
+
+main.content .footnote-ref sup,
+.column-margin sup {
+  font-weight: 600;
+}
+
+/* ---- figures ---- */
+
+main.content figcaption,
+main.content .figure-caption {
+  font-family: "Vollkorn", Georgia, serif;
+  font-size: 14px;
+  font-style: italic;
+  color: var(--post-muted);
+}
+
+/* ---- phones ---- */
+
+@media (max-width: 500px) {
+  main.content { font-size: 17px; }
+  #title-block-header h1.title { font-size: 28px; }
+  main.content h1 { font-size: 22px; }
+  main.content h2,
+  main.content h3,
+  main.content h4 { font-size: 17px; }
+}
