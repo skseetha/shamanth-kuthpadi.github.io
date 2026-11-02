@@ -44,9 +44,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5060182408385a5f7681d6736bc3a52b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-a958d9e0696e10ae72c733141486410e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-5060182408385a5f7681d6736bc3a52b.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-ae58c3331f618a9a5e1a5cd750d4fc30.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-2868b3d2a469f3fe589a72252aed6530.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-ae58c3331f618a9a5e1a5cd750d4fc30.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -84,9 +84,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-author','listing-date','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-title','listing-date','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description"],
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -134,12 +134,10 @@ window.Quarto = {
 };
 </script>
 
+<link rel="stylesheet" href="blog.css">
 <meta property="og:title" content="compilation of my academic and personal writing – Shamanth Kuthpadi">
 <meta property="og:description" content="Shamanth Kuthpadi’s academic home page">
-<meta property="og:image" content="https://shamanthkuthpadi.com/posts/2026-05-22-claude-code/claudecode.png">
 <meta property="og:site_name" content="Shamanth Kuthpadi">
-<meta property="og:image:height" content="1024">
-<meta property="og:image:width" content="1536">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -333,10 +331,6 @@ window.Quarto = {
     <a class="nav-link" href="./contact.html"> 
 <span class="menu-text">Contact</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="./CV.pdf"> 
-<span class="menu-text">CV</span></a>
-  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -380,21 +374,21 @@ window.Quarto = {
 
 
 
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
 <div class="listing-actions-group">
    <div class="input-group input-group-sm quarto-listing-sort">
     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
       <option value="" disabled="" selected="" hidden="">Order By</option>
       <option value="index" data-direction="asc">Default</option>
-      <option value="listing-title" data-direction="asc">
-        Title
-      </option>
       <option value="listing-date-sort" data-direction="asc">
         Date - Oldest
       </option>
       <option value="listing-date-sort" data-direction="desc">
         Date - Newest
+      </option>
+      <option value="listing-title-sort" data-direction="asc">
+        Title
       </option>
       <option value="listing-author" data-direction="asc">
         Author
@@ -406,104 +400,80 @@ window.Quarto = {
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="cHJvZHVjdGl2aXR5" data-listing-date-sort="1779422400000" data-listing-file-modified-sort="1779462698542" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="682">
-<a href="./posts/2026-05-22-claude-code/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/2026-05-22-claude-code/claudecode.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Accustoming to Claude Code
-</h5>
-<div class="card-text listing-description delink">
-For reference, I am a first-year PhD student working in the space of applied machine learning. Recently, I was given access to Claude Code (max version) and have been using…
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Shamanth Kuthpadi S.
-</div>
-<div class="listing-date">
-May 22, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="1" data-categories="bWFjaGluZSUyMGxlYXJuaW5nJTJDc3RhdGlzdGljcw==" data-listing-date-sort="1777953600000" data-listing-file-modified-sort="1777992238316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="824">
-<a href="./posts/2026-05-05-bootstrapping/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/2026-05-05-bootstrapping/bootstrap.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Bootstrapping for Evaluation
-</h5>
-<div class="card-text listing-description delink">
-Typically, in statistics and ML, we work with a sample and try to say something about a much larger population. Whenever we compute a number from that sample — the mean, the…<em></em><em></em>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Shamanth Kuthpadi S.
-</div>
-<div class="listing-date">
-May 5, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="2" data-categories="bWF0aCUyQ2FsZ29yaXRobXMlMkNtYWNoaW5lJTIwbGVhcm5pbmc=" data-listing-date-sort="1773633600000" data-listing-file-modified-sort="1773774371268" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1765">
-<a href="./posts/2026-03-16-probability-refresher/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/2026-03-16-probability-refresher/probability-refresher.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Probability for Randomized Algorithms
-</h5>
-<div class="card-text listing-description delink">
-I always seem to need to refresh my probability theory knowledge and thought that writing some of the core concepts might be useful for myself and for you as well. Since I…<strong></strong>
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Shamanth Kuthpadi S.
-</div>
-<div class="listing-date">
-Mar 16, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-<div class="g-col-1" data-index="3" data-categories="bWFjaGluZSUyMGxlYXJuaW5nJTJDYXVkaW8lMkNzdHJlYW1pbmclMkNyZWFsLXRpbWUlMkN0YWdnaW5n" data-listing-date-sort="1768194000000" data-listing-file-modified-sort="1773604576680" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="317">
-<a href="./posts/2026-01-12-audio-streaming/index.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img loading="lazy" src="./posts/2026-01-12-audio-streaming/audio-streaming.png" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Streaming Offline Audio for Online Audio Tagging
-</h5>
-<div class="card-text listing-description delink">
-First let’s create an audio sample to work with. I won’t go into details about the math behind the waveform.
-</div>
-<div class="card-attribution card-text-small justify">
-<div class="listing-author">
-Shamanth Kuthpadi S.
-</div>
-<div class="listing-date">
-Jan 12, 2026
-</div>
-</div>
-</div>
-</div></a>
-</div>
-</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
+</th>
+
+<th>
+<a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Author</a>
+</th>
+
+</tr>
+</thead>
+<tbody class="list">
+
+<tr data-index="0" data-categories="cHJvZHVjdGl2aXR5" data-listing-date-sort="1779422400000" data-listing-file-modified-sort="1779462698542" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="682" data-listing-title-sort="Accustoming to Claude Code" data-listing-filename-sort="index.qmd">
+<td>
+<a href="./posts/2026-05-22-claude-code/index.html" class="title listing-title">Accustoming to Claude Code</a>
+</td>
+<td>
+<span class="listing-date">May 22, 2026</span>
+</td>
+<td>
+<span class="listing-author">Shamanth Kuthpadi S.</span>
+</td>
+
+</tr>
+
+<tr data-index="1" data-categories="bWFjaGluZSUyMGxlYXJuaW5nJTJDc3RhdGlzdGljcw==" data-listing-date-sort="1777953600000" data-listing-file-modified-sort="1777992238316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="824" data-listing-title-sort="Bootstrapping for Evaluation" data-listing-filename-sort="index.qmd">
+<td>
+<a href="./posts/2026-05-05-bootstrapping/index.html" class="title listing-title">Bootstrapping for Evaluation</a>
+</td>
+<td>
+<span class="listing-date">May 5, 2026</span>
+</td>
+<td>
+<span class="listing-author">Shamanth Kuthpadi S.</span>
+</td>
+
+</tr>
+
+<tr data-index="2" data-categories="bWF0aCUyQ2FsZ29yaXRobXMlMkNtYWNoaW5lJTIwbGVhcm5pbmc=" data-listing-date-sort="1773633600000" data-listing-file-modified-sort="1773774371268" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="9" data-listing-word-count-sort="1765" data-listing-title-sort="Probability for Randomized Algorithms" data-listing-filename-sort="index.qmd">
+<td>
+<a href="./posts/2026-03-16-probability-refresher/index.html" class="title listing-title">Probability for Randomized Algorithms</a>
+</td>
+<td>
+<span class="listing-date">Mar 16, 2026</span>
+</td>
+<td>
+<span class="listing-author">Shamanth Kuthpadi S.</span>
+</td>
+
+</tr>
+
+<tr data-index="3" data-categories="bWFjaGluZSUyMGxlYXJuaW5nJTJDYXVkaW8lMkNzdHJlYW1pbmclMkNyZWFsLXRpbWUlMkN0YWdnaW5n" data-listing-date-sort="1768194000000" data-listing-file-modified-sort="1773604576680" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="317" data-listing-title-sort="Streaming Offline Audio for Online Audio Tagging" data-listing-filename-sort="index.ipynb">
+<td>
+<a href="./posts/2026-01-12-audio-streaming/index.html" class="title listing-title">Streaming Offline Audio for Online Audio Tagging</a>
+</td>
+<td>
+<span class="listing-date">Jan 12, 2026</span>
+</td>
+<td>
+<span class="listing-author">Shamanth Kuthpadi S.</span>
+</td>
+
+</tr>
+
+</tbody>
+</table>
 <div class="listing-no-matching d-none">No matching items</div>
 </div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -925,7 +895,7 @@ Jan 12, 2026
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
- Copyright 2025, Shamanth Kuthpadi.
+ Copyright 2026, Shamanth Kuthpadi.
   </li>  
 </ul>
     </div>   

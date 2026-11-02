@@ -1,0 +1,170 @@
+/* Blog listing page, styled as a table of contents to match the posts
+   (see posts/post.css): Vollkorn, a ruled italic title, and dotted leaders. */
+
+:root {
+  --post-ink: #1d1d1d;
+  --post-paper: #ffffff;
+  --post-muted: #555555;
+}
+
+body.quarto-dark {
+  --post-ink: #e8e6e3;
+  --post-paper: #222222;
+  --post-muted: #a8a8a8;
+}
+
+/* ---- column and intro text ---- */
+
+#title-block-header,
+main.content {
+  font-family: "Vollkorn", Georgia, serif;
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum";
+  color: var(--post-ink);
+  width: 100%;
+  max-width: 760px;
+  margin-inline: auto;
+}
+
+main.content {
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+/* ---- title ---- */
+
+#title-block-header {
+  margin-top: 2rem;
+  margin-bottom: 1.2rem;
+}
+
+#title-block-header h1.title {
+  font-family: "Vollkorn", Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 1.1;
+  color: var(--post-ink);
+  margin-bottom: 0;
+  padding-bottom: 0.1em;
+  border-bottom: 1.7px solid var(--post-ink);
+}
+
+/* ---- sort and filter: small, borderless ---- */
+
+.quarto-listing-sort,
+.quarto-listing-filter {
+  font-size: 15px;
+}
+
+.quarto-listing-sort .input-group-text,
+.quarto-listing-filter .input-group-text,
+.quarto-listing-sort select,
+.quarto-listing-filter input {
+  font-family: inherit;
+  color: var(--post-muted);
+  background-color: transparent !important;
+  border: none;
+  border-radius: 0;
+}
+
+.quarto-listing-sort select,
+.quarto-listing-filter input {
+  border-bottom: 1px solid var(--post-muted);
+}
+
+/* ---- rows: title, dotted leader, date, author ---- */
+
+.quarto-listing-table,
+.quarto-listing-table tbody {
+  display: block;
+  border: none;
+}
+
+.quarto-listing-table thead {
+  display: none;
+}
+
+.quarto-listing-table tr {
+  display: flex;
+  align-items: baseline;
+  gap: 1em;
+  padding: 0.3em 0;
+}
+
+.quarto-listing-table td {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.quarto-listing-table td:first-child {
+  display: flex;
+  align-items: baseline;
+  flex: 1;
+  min-width: 0;
+}
+
+.quarto-listing-table td:first-child::after {
+  content: "";
+  flex: 1;
+  min-width: 1.5em;
+  margin-left: 0.6em;
+  border-bottom: 1.5px dotted var(--post-muted);
+}
+
+.quarto-listing-table a.listing-title {
+  font-style: italic;
+  color: var(--post-ink);
+  text-decoration: none;
+}
+
+.quarto-listing-table a.listing-title:hover {
+  background: var(--post-ink);
+  color: var(--post-paper);
+}
+
+.quarto-listing-table .listing-date,
+.quarto-listing-table .listing-author {
+  color: var(--post-muted);
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+/* tabular numerals, so the dates line up */
+.quarto-listing-table .listing-date {
+  font-feature-settings: "lnum", "tnum";
+}
+
+/* ---- closing ornament, the same one that divides sections in posts ---- */
+
+.quarto-listing-container-table::after {
+  content: "\2053";
+  display: block;
+  margin-top: 1em;
+  text-align: center;
+  font-size: 1.4em;
+  color: var(--post-ink);
+}
+
+/* ---- phones: drop the leaders and stack each entry ---- */
+
+@media (max-width: 576px) {
+  main.content { font-size: 17px; }
+  #title-block-header h1.title { font-size: 28px; }
+
+  .quarto-listing-table tr {
+    flex-wrap: wrap;
+    gap: 0 0.8em;
+    padding: 0.5em 0;
+  }
+
+  .quarto-listing-table td:first-child {
+    flex-basis: 100%;
+  }
+
+  .quarto-listing-table td:first-child::after {
+    display: none;
+  }
+}
